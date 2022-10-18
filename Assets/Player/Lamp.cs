@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lamp : MonoBehaviour
 {
     public Light light;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,17 @@ public class Lamp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        light.intensity -= Time.deltaTime * 0.1f;
+        light.intensity -= Time.deltaTime * 0.03f;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "LightPickup":
+                Destroy(other.gameObject);
+                light.intensity += 0.1f;
+                break;
+        }
     }
 }
