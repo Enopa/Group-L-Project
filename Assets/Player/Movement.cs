@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
     
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "Obstacle")
+        if (col.gameObject.tag == "ObstacleCollide")
         {
             slowdown = true;
             Destroy(col.gameObject);
