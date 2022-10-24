@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12.0f;
+    public bool slowdown = false;
+    public float countDown = 0.03f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,30 @@ public class Movement : MonoBehaviour
         Vector3 movement = transform.right * moveX + transform.forward * moveY;
 
         controller.Move(movement * speed * Time.deltaTime);
+
+        if (slowdown == true) {
+            countDown -= Time.deltaTime;
+            speed = 4.0f;
+
+            if (countDown <= 0f)
+            {
+                slowdown = false;
+                speed = 12.0f;
+            }
+        }
+
+
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "ObstacleCollide":
+                Destroy(other.gameObject);
+                slowdown = true;
+                break;
+        }
+    }
+
 }
