@@ -4584,10 +4584,10 @@ PrefabInstance:
     - target: {fileID: 3837334244660313037, guid: baf326095071ec244bc69beb85c218e2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a16ad00871bd35446ab9a599aaa584e6, type: 2}
+      objectReference: {fileID: 2100000, guid: 469dde8154f5f564abf4e74e75ee2d2b, type: 2}
     - target: {fileID: 6098052044399270172, guid: baf326095071ec244bc69beb85c218e2, type: 3}
       propertyPath: m_Name
-      value: Obstacle
+      value: SlowDownObstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6098052044399270172, guid: baf326095071ec244bc69beb85c218e2, type: 3}
       propertyPath: m_StaticEditorFlags
