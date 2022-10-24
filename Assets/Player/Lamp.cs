@@ -15,7 +15,7 @@ public class Lamp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        light.intensity -= Time.deltaTime * 0.03f;
+        light.intensity -= Time.deltaTime * 0.01f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,7 +24,7 @@ public class Lamp : MonoBehaviour
         {
             case "LightPickup":
                 Destroy(other.gameObject);
-                light.intensity += 0.1f;
+                light.intensity += 0.2f;
                 break;
         }
     }

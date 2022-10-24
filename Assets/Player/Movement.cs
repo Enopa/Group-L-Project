@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
 
     public float speed = 12.0f;
     public bool slowdown = false;
+    public bool stopmovement=false;
     public float countDown = 0.03f;
 
     // Start is called before the first frame update
@@ -36,6 +37,10 @@ public class Movement : MonoBehaviour
                 speed = 12.0f;
             }
         }
+        if (stopmovement==true){
+            speed = 0f;
+
+        }
 
 
     }
@@ -48,6 +53,12 @@ public class Movement : MonoBehaviour
                 Destroy(other.gameObject);
                 slowdown = true;
                 break;
+            case "ObstacleDeath":
+                FindObjectOfType<GameManager>().Endgame();
+                stopmovement=true;
+                break;
+
+
         }
     }
 
