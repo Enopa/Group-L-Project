@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
 
     public float speed = 12.0f;
     public bool slowdown = false;
-    public float countDown = 10.0f;
+    public float countDown = 0.03f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,22 +28,27 @@ public class Movement : MonoBehaviour
 
         if (slowdown == true) {
             countDown -= Time.deltaTime;
-            if (countDown > 0)
+            speed = 4.0f;
+
+            if (countDown == 0f)
             {
-                speed = 6.0f;
+                slowdown = false;
+                speed = 12.0f;
             }
         }
 
+
     }
-    
-    void OnCollisionEnter(Collision col)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (col.gameObject.tag == "ObstacleCollide")
+        switch (other.tag)
         {
-            slowdown = true;
-            Destroy(col.gameObject);
+            case "ObstacleCollide":
+                Destroy(other.gameObject);
+                slowdown = true;
+                break;
         }
-          
     }
-    
+
 }
