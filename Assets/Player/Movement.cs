@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
             countDown -= Time.deltaTime;
             speed = 4.0f;
 
-            if (countDown == 0f)
+            if (countDown <= 0f)
             {
                 slowdown = false;
                 speed = 12.0f;

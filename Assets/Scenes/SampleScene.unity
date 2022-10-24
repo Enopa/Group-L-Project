@@ -4388,8 +4388,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1813175009}
   speed: 12
-  slowdown: 1
-  countDown: 10
+  slowdown: 0
+  countDown: 1.5
 --- !u!1 &1950884872
 GameObject:
   m_ObjectHideFlags: 0
