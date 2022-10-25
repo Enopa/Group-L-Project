@@ -7,9 +7,9 @@ public class Movement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12.0f;
-    public bool slowdown = false;
-    public bool stopmovement=false;
-    public float countDown = 0.03f;
+    private bool stopmovement=false;
+    private float slowTimer;
+    private bool slowdown = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,15 +28,16 @@ public class Movement : MonoBehaviour
         controller.Move(movement * speed * Time.deltaTime);
 
         if (slowdown == true) {
-            countDown -= Time.deltaTime;
-            speed = 4.0f;
+            slowTimer -= Time.deltaTime;
+            speed = 3.0f;
 
-            if (countDown <= 0f)
+            if (slowTimer <= 0f)
             {
                 slowdown = false;
                 speed = 12.0f;
             }
         }
+
         if (stopmovement==true){
             speed = 0f;
 
@@ -52,13 +53,12 @@ public class Movement : MonoBehaviour
             case "ObstacleCollide":
                 Destroy(other.gameObject);
                 slowdown = true;
+                slowTimer = 0.5f;
                 break;
             case "ObstacleDeath":
                 FindObjectOfType<GameManager>().Endgame();
                 stopmovement=true;
                 break;
-
-
         }
     }
 

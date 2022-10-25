@@ -6,6 +6,9 @@ public class Lamp : MonoBehaviour
 {
     public Light light;
 
+    public float lightDimSpeed;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +18,15 @@ public class Lamp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        light.intensity -= Time.deltaTime * 0.01f;
+        light.intensity -= Time.deltaTime * lightDimSpeed;
+
+
+        //Debug stuff
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            lightDimSpeed = 0.0f;
+            light.intensity = 0.3f;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
