@@ -18,9 +18,11 @@ public class Lamp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        light.intensity -= Time.deltaTime * lightDimSpeed;
-
-
+        if (light.intensity > .05f)
+        {
+            light.intensity -= Time.deltaTime * lightDimSpeed;
+        }
+        
         //Debug stuff
         if (Input.GetKey(KeyCode.Alpha1))
         {
