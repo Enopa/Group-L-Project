@@ -15,6 +15,7 @@ public class SafeDoor : MonoBehaviour
     private bool closing = false;
     private bool closedDoors;
 
+    public GameObject enemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class SafeDoor : MonoBehaviour
             {
                 closing = false;
                 closedDoors = true;
+                enemy.SetActive(false);
             }
         }
 

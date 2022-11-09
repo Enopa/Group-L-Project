@@ -105,6 +105,12 @@ public class Movement : MonoBehaviour
 
         }
 
+        //DebugStuff
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            staminaDrain = 0f;
+        }
+
 
     }
 
