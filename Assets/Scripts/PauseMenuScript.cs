@@ -19,17 +19,18 @@ public class PauseMenuScript : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape)) {
-            if (isPaused) {
+            if (isPaused) {             
                 Play();
             } else {
+                PauseMenuCanvas.SetActive(true);
                 Stop();
             }
         }
     }
 
-    void Stop() {
+    public void Stop() {
         // when game stopped, canvas is made visible, and game is frozen
-        PauseMenuCanvas.SetActive(true);
+        
         Time.timeScale = 0f;
         isPaused = true;
 
@@ -40,8 +41,8 @@ public class PauseMenuScript : MonoBehaviour
 
     public void Play() {
         // function reverses changes made in Stop
-        Cursor.lockState = CursorLockMode.Locked;
         PauseMenuCanvas.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
         isPaused = false;
     }

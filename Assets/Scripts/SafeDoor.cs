@@ -9,8 +9,11 @@ public class SafeDoor : MonoBehaviour
     public GameObject doorRight;
     public float moveSpeed;
     public float closePos;
+    public GameObject nextLevel;
+    public PauseMenuScript pause;
 
     private bool closing = false;
+    private bool closedDoors;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +31,11 @@ public class SafeDoor : MonoBehaviour
             if (doorLeft.transform.position.x <= closePos)
             {
                 closing = false;
+                closedDoors = true;
             }
         }
+
+
 
     }
 
@@ -37,7 +43,17 @@ public class SafeDoor : MonoBehaviour
     {
         if (other.tag == "PlayerHitbox")
         {
-            closing = true;
+            if (closedDoors)
+            {
+                pause.Stop();
+                nextLevel.SetActive(true);
+            } else
+            {
+                closing = true;
+            }
+            
         }
+
+        
     }
 }

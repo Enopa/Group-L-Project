@@ -19,20 +19,23 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && !hitbox.activeSelf && attackTimer <= 0)
+        if (Time.timeScale > 0)
         {
-            hitbox.SetActive(true);
-            attackTimer = attackActive;
-        }
+            if (Input.GetButtonDown("Fire1") && !hitbox.activeSelf && attackTimer <= 0)
+            {
+                hitbox.SetActive(true);
+                attackTimer = attackActive;
+            }
 
-        if (attackTimer >= 0)
-        {
-            attackTimer -= Time.deltaTime;
-        }
+            if (attackTimer >= 0)
+            {
+                attackTimer -= Time.deltaTime;
+            }
 
-        if (attackTimer <= attackCooldown)
-        {
-            hitbox.SetActive(false);
+            if (attackTimer <= attackCooldown)
+            {
+                hitbox.SetActive(false);
+            }
         }
     }
 }
