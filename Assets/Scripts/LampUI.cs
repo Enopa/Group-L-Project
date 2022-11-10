@@ -14,7 +14,7 @@ public class LampUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        slider.minValue = light.intensity;
     }
 
     // Update is called once per frame

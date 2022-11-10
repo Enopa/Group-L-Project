@@ -8,17 +8,19 @@ public class Lamp : MonoBehaviour
 
     public float lightDimSpeed;
 
+    public float minLight;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        light.intensity = minLight;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (light.intensity > .05f)
+        if (light.intensity > minLight)
         {
             light.intensity -= Time.deltaTime * lightDimSpeed;
         }
