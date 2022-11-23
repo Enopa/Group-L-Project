@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SafeDoor : MonoBehaviour
 {
@@ -13,7 +12,7 @@ public class SafeDoor : MonoBehaviour
     public GameObject nextLevel;
     public PauseMenuScript pause;
 
-    public bool closing = false;
+    private bool closing = false;
     private bool closedDoors;
 
     public GameObject enemy;
@@ -49,10 +48,7 @@ public class SafeDoor : MonoBehaviour
             if (closedDoors)
             {
                 pause.Stop();
-                if (SceneManager.GetActiveScene().name != "0")
-                {
-                    nextLevel.SetActive(true);
-                }
+                nextLevel.SetActive(true);
             } else
             {
                 closing = true;

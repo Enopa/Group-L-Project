@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void play() {
         // just using the name of the sample scene to load it for now
-        SceneManager.LoadScene("0");
+        SceneManager.LoadScene("1");
     }
 
     public void quit() {
