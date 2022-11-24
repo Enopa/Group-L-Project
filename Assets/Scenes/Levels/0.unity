@@ -12760,6 +12760,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 640be3c4217836e46ba697f04c2a5d4d, type: 2}
+    - target: {fileID: 8438793695420857091, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 467927336}
     - target: {fileID: 8483756253021237147, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -14677,7 +14681,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-22330
+  m_Name: pb_Mesh-1868
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
