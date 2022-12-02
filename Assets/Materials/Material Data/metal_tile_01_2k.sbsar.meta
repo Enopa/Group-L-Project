@@ -10,5 +10,5 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: dda12f74ff9116a42b23482252b2c482, type: 3}
   _instancesCopy:
   - {fileID: 11400000, guid: 0a8a296154b1cd845a3c46b1396a56fd, type: 2}
-  _fileAsset: {instanceID: 0}
-  _assetPath: Assets/Materials/metal_tile_01_2k.sbsar
+  _fileAsset: {fileID: 349431513902975818, guid: 183c316ce2017434f84609c47f2adbe6, type: 3}
+  _assetPath: Assets/Materials/Material Data/metal_tile_01_2k.sbsar

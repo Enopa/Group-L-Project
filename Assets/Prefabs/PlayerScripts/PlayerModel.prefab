@@ -393,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   light: {fileID: 422164150155670250}
   lightDimSpeed: 0.1
-  minLight: 0.15
+  minLight: 0.3
 --- !u!114 &422164150803363239
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -48,9 +48,10 @@ public class SafeDoor : MonoBehaviour
         {
             if (closedDoors)
             {
-                pause.Stop();
+                
                 if (SceneManager.GetActiveScene().name != "0")
                 {
+                    pause.Stop();
                     nextLevel.SetActive(true);
                 }
             } else
