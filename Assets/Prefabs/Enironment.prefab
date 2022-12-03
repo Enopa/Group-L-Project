@@ -15728,8 +15728,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 5014724178769490992}
   staminaSlider: {fileID: 5014724179551778078}
-  light: {fileID: 0}
-  movement: {fileID: 0}
+  light: {fileID: 435247127140614251}
+  movement: {fileID: 435247128065787686}
 --- !u!1 &5014724179039614087
 GameObject:
   m_ObjectHideFlags: 0
@@ -24884,6 +24884,22 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8142fea080680fb4ea1af7e75b0f547c, type: 3}
+--- !u!108 &435247127140614251 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 422164150155670250, guid: 8142fea080680fb4ea1af7e75b0f547c, type: 3}
+  m_PrefabInstance: {fileID: 275171450985853569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &435247128065787686 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 422164150803363239, guid: 8142fea080680fb4ea1af7e75b0f547c, type: 3}
+  m_PrefabInstance: {fileID: 275171450985853569}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54de5f6be9886e04ea10cc39a404e9ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &435247128065787687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 422164150803363238, guid: 8142fea080680fb4ea1af7e75b0f547c, type: 3}
