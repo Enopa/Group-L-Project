@@ -30,12 +30,12 @@ public class SafeDoor : MonoBehaviour
         {
             doorLeft.transform.Translate(new Vector3(0, 0, -moveSpeed * Time.deltaTime));
             doorRight.transform.Translate(new Vector3(0, 0, moveSpeed * Time.deltaTime));
-            if (doorLeft.transform.position.x <= closePos)
+            if (doorLeft.transform.localPosition.x <= closePos)
             {
                 closing = false;
                 closedDoors = true;
                 enemy.SetActive(false);
-            }
+            } 
         }
 
 
