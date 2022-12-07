@@ -31,9 +31,14 @@ public class Movement : MonoBehaviour
     private float slowTimer;
     private bool slowdown = false;
 
+    //animation
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
+        controller= GetComponent<CharacterController>();
+        anim= GetComponentInChildren<Animator>();
         
     }
 
@@ -68,6 +73,7 @@ public class Movement : MonoBehaviour
         //Sprinting stuff
         if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded && stamina > 0)
         {
+            anim.SetTrigger("sprint");
             speed = baseSpeed * 2;   
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
@@ -77,15 +83,40 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             stamina -= Time.deltaTime * staminaDrain;
+            anim.SetFloat("Blend", 1);
+
             if (stamina <= 0) 
             {
                 speed = baseSpeed;
+                anim.SetFloat("Blend", 0.8f, 0.1f, Time.deltaTime);
             }
         } else
         {
             stamina += Time.deltaTime * staminaGain;
         }
         stamina = Mathf.Clamp(stamina, 0, 1);
+
+        // WASD animation
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            anim.SetFloat("Blend", 0.25f, 0.1f, Time.deltaTime);
+            
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            anim.SetFloat("Blend", 0.75f, 0.1f, Time.deltaTime);
+            
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            anim.SetFloat("Blend", 0.5f, 0.1f, Time.deltaTime);
+            
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            anim.SetFloat("Blend", 1, 0.1f, Time.deltaTime);
+            
+        }
 
 
         //SLOWDOWN + EFFECTS
@@ -98,6 +129,11 @@ public class Movement : MonoBehaviour
                 slowdown = false;
                 speed = baseSpeed;
             }
+        }
+
+        if (movement== Vector3.zero){
+                        
+            anim.SetFloat("Blend", 0f, 0.1f,Time.deltaTime);
         }
 
         if (stopmovement==true){
