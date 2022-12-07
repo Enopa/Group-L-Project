@@ -31,9 +31,13 @@ public class Movement : MonoBehaviour
     private float slowTimer;
     private bool slowdown = false;
 
+    //animation variable
+    private Animator anim; 
+
     // Start is called before the first frame update
     void Start()
     {
+        anim= GetComponentInChildren<Animator>();
         
     }
 
@@ -68,10 +72,11 @@ public class Movement : MonoBehaviour
         //Sprinting stuff
         if (Input.GetKeyDown(KeyCode.LeftShift) && isGrounded && stamina > 0)
         {
+            anim.SetTrigger("Sprint");
             speed = baseSpeed * 2;   
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
+        {   anim.SetTrigger("Sprint");
             speed = baseSpeed;
         }
         if (Input.GetKey(KeyCode.LeftShift))
@@ -109,6 +114,24 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha2))
         {
             staminaDrain = 0f;
+        }
+
+        //animation set ups with key presses
+
+        if (movement== Vector3.zero){
+            anim.SetFloat("Blend", 0, 0.1f, Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.W)){
+            anim.SetFloat("Blend", 0.25f, 0.1f, Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.A)){
+            anim.SetFloat("Blend", 0.75f, 0.1f, Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.S)){
+            anim.SetFloat("Blend", 0.5f, 0.1f, Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.D)){
+            anim.SetFloat("Blend", 1, 0.1f, Time.deltaTime);
         }
 
 
