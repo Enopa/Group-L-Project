@@ -9,10 +9,12 @@ public class Attack : MonoBehaviour
 
     public float attackCooldown;
     public float attackActive;
+    private Animator anim; 
 
     // Start is called before the first frame update
     void Start()
     {
+        anim= GetComponentInChildren<Animator>();
         
     }
 
@@ -23,8 +25,14 @@ public class Attack : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1") && !hitbox.activeSelf && attackTimer <= 0)
             {
+                anim.SetTrigger("attack");
                 hitbox.SetActive(true);
                 attackTimer = attackActive;
+            }
+            //condition for animation to go to idle states after attack is done
+            if (Input.GetButtonUp("Fire1"))
+            {
+                anim.SetTrigger("attack");
             }
 
             if (attackTimer >= 0)
