@@ -76,7 +76,7 @@ public class Movement : MonoBehaviour
             speed = baseSpeed * 2;   
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
+        {   anim.SetTrigger("Sprint");
             speed = baseSpeed;
         }
         if (Input.GetKey(KeyCode.LeftShift))
@@ -121,16 +121,16 @@ public class Movement : MonoBehaviour
         if (movement== Vector3.zero){
             anim.SetFloat("Blend", 0, 0.1f, Time.deltaTime);
         }
-        if (Input.GetKeyDown(KeyCode.W)){
+        if (Input.GetKey(KeyCode.W)){
             anim.SetFloat("Blend", 0.25f, 0.1f, Time.deltaTime);
         }
-        if (Input.GetKeyDown(KeyCode.A)){
+        if (Input.GetKey(KeyCode.A)){
             anim.SetFloat("Blend", 0.75f, 0.1f, Time.deltaTime);
         }
-        if (Input.GetKeyDown(KeyCode.S)){
+        if (Input.GetKey(KeyCode.S)){
             anim.SetFloat("Blend", 0.5f, 0.1f, Time.deltaTime);
         }
-        if (Input.GetKeyDown(KeyCode.D)){
+        if (Input.GetKey(KeyCode.D)){
             anim.SetFloat("Blend", 1, 0.1f, Time.deltaTime);
         }
 
