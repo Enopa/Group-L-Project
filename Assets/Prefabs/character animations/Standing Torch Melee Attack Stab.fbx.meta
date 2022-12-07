@@ -1,14 +1,12 @@
 fileFormatVersion: 2
-guid: bcc040becd3bbb54188d6aab1f4fdbd8
+guid: aa57a70c0ef46024db8160865456abfe
 ModelImporter:
   serializedVersion: 22103
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: hero
-    second: {fileID: 2100000, guid: ac7ba31ff021d1c4d89ba30750eb6f98, type: 2}
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -95,7 +93,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: male_player
+    rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
