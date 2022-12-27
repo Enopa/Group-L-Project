@@ -34,4 +34,13 @@ public class GameManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Player has quit the game");
     }
+
+    public void nextLevel()
+    {
+        int level = SceneManager.GetActiveScene().buildIndex;
+        if (level != 5)
+        {
+            SceneManager.LoadScene(SceneManager.GetSceneByBuildIndex(level + 1).name);
+        }
+    }
 }
