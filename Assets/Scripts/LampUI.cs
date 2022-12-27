@@ -22,5 +22,8 @@ public class LampUI : MonoBehaviour
     {
         slider.value = light.intensity;
         staminaSlider.value = movement.stamina;
+        Debug.Log("light: " + light.intensity);
+        Debug.Log("movement: " + staminaSlider.value);
+
     }
 }
