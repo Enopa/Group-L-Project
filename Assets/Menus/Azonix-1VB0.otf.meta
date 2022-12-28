@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 859d5096670cc3d4d8319437b3724c98
+guid: be5e79025c3c77c489c7e39482b65a1e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Cartesian
+  - Azonix
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

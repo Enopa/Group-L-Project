@@ -29403,6 +29403,28 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &657170629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6486702090641223420, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+  m_PrefabInstance: {fileID: 870527116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ed229473d7b9dc42b3920f7dd368274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &657170630 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5014724178077940713, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+  m_PrefabInstance: {fileID: 870527116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4fcfbe61800ad44687eae36b95cbfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &662032582
 GameObject:
   m_ObjectHideFlags: 0
@@ -38690,6 +38712,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 727901959}
+    - target: {fileID: 3232746071882146118, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 657170629}
+    - target: {fileID: 3232746071882146118, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuButton
+      objectReference: {fileID: 0}
     - target: {fileID: 3246492422690847313, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -39054,6 +39084,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 15999812}
+    - target: {fileID: 6486702090641223420, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+      propertyPath: PauseMenuCanvas
+      value: 
+      objectReference: {fileID: 870527118}
     - target: {fileID: 6544215053937003683, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
       propertyPath: m_Name
       value: StartSafeRoom
@@ -39166,6 +39200,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 477243837}
+    - target: {fileID: 7729846706114955467, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 657170630}
+    - target: {fileID: 7729846706114955467, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: restart
+      objectReference: {fileID: 0}
     - target: {fileID: 7739666280708107035, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -39246,6 +39288,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 33370625}
+    - target: {fileID: 9137863388662342294, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 657170629}
+    - target: {fileID: 9137863388662342294, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
     - target: {fileID: 9152565064114481967, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -39259,6 +39309,11 @@ PrefabInstance:
 --- !u!224 &870527117 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5014724178903867871, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+  m_PrefabInstance: {fileID: 870527116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &870527118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6389513101119291479, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
   m_PrefabInstance: {fileID: 870527116}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &871313822
