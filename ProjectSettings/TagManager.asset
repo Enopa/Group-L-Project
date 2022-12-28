@@ -7,6 +7,8 @@ TagManager:
   - LightPickup
   - ObstacleDeath
   - ObstacleCollide
+  - PlayerHitbox
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Post Processing
   - 
   - 
   - 
