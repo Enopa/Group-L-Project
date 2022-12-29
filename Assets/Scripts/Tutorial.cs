@@ -8,7 +8,6 @@ public class Tutorial : MonoBehaviour
 {
     public GameObject text;
 
-    public GameObject box;
 
     public GameObject player;
 
@@ -55,7 +54,6 @@ public class Tutorial : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.LeftShift))
                 {
                     text.SetActive(false);
-                    box.SetActive(false);
                     timer = 5f;
                     state = GameState.Lights;           
                 }
@@ -69,7 +67,6 @@ public class Tutorial : MonoBehaviour
                     Destroy(lights);
                     Destroy(door);
                     text.SetActive(true);
-                    box.SetActive(true);
                     setText("Use your lamp to illuminate the dark.\n Yellow batteries keep the lamp bright");
                     if (player.GetComponent<Lamp>().light.intensity > player.GetComponent<Lamp>().minLight)
                     {
@@ -89,7 +86,6 @@ public class Tutorial : MonoBehaviour
                 if (button.closing)
                 {
                     text.SetActive(false);
-                    box.SetActive(false);
                     timer = 5f;
                     state = GameState.Scare;
                 }
