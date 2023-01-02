@@ -197,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 200
   body: {fileID: 422164150803363238}
+  interact: {fileID: 0}
 --- !u!1 &422164149756991099
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitbox: {fileID: 422164148849360476}
   attackCooldown: 0.3
-  attackActive: 0.45
+  attackActive: 0.7
 --- !u!1001 &2766668208256390327
 PrefabInstance:
   m_ObjectHideFlags: 0
