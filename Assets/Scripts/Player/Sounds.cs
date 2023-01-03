@@ -6,6 +6,7 @@ public class Sounds : MonoBehaviour
 {
     public AudioSource footstepsSound;
     public AudioSource sprintSound;
+    public AudioSource swingSound;
     public Movement movement;
 
     void Update(){
@@ -24,6 +25,13 @@ public class Sounds : MonoBehaviour
         else{
             footstepsSound.enabled=false;
         }
+
+        if(Input.GetButtonDown("Fire1")){
+            swingSound.enabled=true;
+            swingSound.Play();
+
+        }   
+
 
     }
 
