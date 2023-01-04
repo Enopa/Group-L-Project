@@ -13,6 +13,11 @@ public class levelSelector : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        
+    }
+
     public void StartScene()
     {
         SceneManager.LoadScene("" + level.ToString());

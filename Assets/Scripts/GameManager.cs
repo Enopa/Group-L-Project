@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
             gameEnd=true;
             Cursor.lockState = CursorLockMode.None;
             gameOverUI.SetActive(true);
+            Time.timeScale = 0f;
         }
 
     }

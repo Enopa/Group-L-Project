@@ -2445,7 +2445,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh47152
+  m_Name: pb_Mesh97568
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -20309,7 +20309,7 @@ PrefabInstance:
     - target: {fileID: 2646227637153577572, guid: ca105dee96d6092478351654ef4e4a89, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1670677450}
     - target: {fileID: 2646227637153577573, guid: ca105dee96d6092478351654ef4e4a89, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -67841,6 +67841,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 862339156}
+    - target: {fileID: 9125737833717551753, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125737833717551753, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 29.4
+      objectReference: {fileID: 0}
     - target: {fileID: 9137863388662342294, guid: 3441e501d46b2594d9ceb816c57bd4cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

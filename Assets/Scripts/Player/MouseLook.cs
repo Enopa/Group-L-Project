@@ -18,6 +18,7 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        interact = gameObject;
     }
 
     // Update is called once per frame
@@ -49,7 +50,10 @@ public class MouseLook : MonoBehaviour
             else
             {
                 // Hitting something else.
-                interact.GetComponent<Interactable>().deactivate();
+                if (interact.tag == "Interactable")
+                {
+                    interact.GetComponent<Interactable>().deactivate();
+                }
                 key = false;
             }
         }
