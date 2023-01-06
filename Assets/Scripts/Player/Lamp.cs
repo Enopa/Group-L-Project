@@ -39,7 +39,7 @@ public class Lamp : MonoBehaviour
         {
             case "LightPickup":
                 Destroy(other.gameObject);
-                light.intensity += 0.2f;
+                light.intensity += 0.3f;
                 break;
         }
     }

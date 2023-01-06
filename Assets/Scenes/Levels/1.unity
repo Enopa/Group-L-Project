@@ -69753,7 +69753,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5014724177699173865}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: nextLevel
         m_Mode: 1

@@ -411,8 +411,8 @@ MonoBehaviour:
   baseSpeed: 12
   gravity: -20
   jumpHeight: 3
-  staminaDrain: 0.5
-  staminaGain: 0.08
+  staminaDrain: 0.3
+  staminaGain: 0.6
   stamina: 1
   groundCheck: {fileID: 422164149756990980}
   groundDistance: 0.4
