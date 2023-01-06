@@ -38,7 +38,7 @@ public class Interactable : MonoBehaviour
 
     public void deactivate()
     {
-        GetComponent<Renderer>().material.SetColor("_Color", Color.white);
+        GetComponent<Renderer>().material.SetColor("_Color", Color.black);
         hover = false;
         ui.SetActive(false);
     }

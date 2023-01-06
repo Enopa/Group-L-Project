@@ -21,6 +21,8 @@ public class Tutorial : MonoBehaviour
 
     public GameObject enemy;
 
+    public GameObject scareNoise;
+
     enum GameState {Start, Moved, Jumped, Sprinted, Lights, Obstacle, Saferoom, Scare}
     private GameState state = GameState.Start;
 
@@ -91,6 +93,7 @@ public class Tutorial : MonoBehaviour
                 }
                 break;
             case GameState.Scare:
+                scareNoise.SetActive(true);
                 if (timer > 0f)
                 {
                     timer -= Time.deltaTime;
