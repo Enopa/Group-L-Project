@@ -18,11 +18,13 @@ public class PauseMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) {
-            if (isPaused) {             
+        if(Input.GetKeyDown(KeyCode.P)) {
+            if (isPaused) {
+                
                 Play();
             } else {
                 PauseMenuCanvas.SetActive(true);
+                
                 Stop();
             }
         }
@@ -30,7 +32,7 @@ public class PauseMenuScript : MonoBehaviour
 
     public void Stop() {
         // when game stopped, canvas is made visible, and game is frozen
-        
+        AudioListener.volume = 0f;
         Time.timeScale = 0f;
         isPaused = true;
 
@@ -40,6 +42,8 @@ public class PauseMenuScript : MonoBehaviour
     }
 
     public void Play() {
+
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
         // function reverses changes made in Stop
         PauseMenuCanvas.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;

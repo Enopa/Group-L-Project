@@ -10,6 +10,8 @@ public class Lamp : MonoBehaviour
 
     public float minLight;
 
+    public AudioSource sound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class Lamp : MonoBehaviour
             case "LightPickup":
                 Destroy(other.gameObject);
                 light.intensity += 0.3f;
+                sound.Play();
                 break;
         }
     }

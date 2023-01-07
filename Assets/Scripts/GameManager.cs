@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour
     bool gameEnd=false;
     public float restartDelay=.3f;
 
+    public void Start()
+    {
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
+    }
+
     // Start is called before the first frame update
     public void Endgame() {
 
@@ -18,6 +23,7 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             gameOverUI.SetActive(true);
             Time.timeScale = 0f;
+            AudioListener.volume = 0f;
         }
 
     }
@@ -38,7 +44,12 @@ public class GameManager : MonoBehaviour
 
     public void nextLevel()
     {
+        
         int level = SceneManager.GetActiveScene().buildIndex;
+        if (level == 4)
+        {
+            level = -1;
+        }
         SceneManager.LoadScene(level + 1);
     }
 }
