@@ -7,6 +7,9 @@ public class TutorialEnemy : MonoBehaviour
 {
     public GameObject finalScreen;
     public GameObject player;
+    public AudioSource music;
+    public AudioSource bangingSound;
+    public AudioSource title;
 
     public Rigidbody body;
 
@@ -15,6 +18,10 @@ public class TutorialEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player.GetComponent<Movement>().enabled = false;
+        music.enabled=false;
+        bangingSound.enabled=false;
+        title.enabled=true;
         body = GetComponent<Rigidbody>();   
     }
 
