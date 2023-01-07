@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         sensitivity.value = PlayerPrefs.GetFloat("sensitivity", 100f);
-        volume.value = PlayerPrefs.GetFloat("volume", 0.2f);
+        volume.value = PlayerPrefs.GetFloat("volume", 1f);
         AudioListener.volume = PlayerPrefs.GetFloat("volume", 0.2f);
 
         switch (PlayerPrefs.GetString("difficulty", "MEDIUM"))
