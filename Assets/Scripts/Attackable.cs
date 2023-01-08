@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Attackable : MonoBehaviour
 {
+    public AudioSource breakSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,8 @@ public class Attackable : MonoBehaviour
     {
         if (other.tag == "PlayerHitbox")
         {
+            breakSound.enabled=true;
+            breakSound.Play();
             Destroy(gameObject);
         }
     }
