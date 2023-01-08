@@ -14,7 +14,7 @@ public class SafeDoor : MonoBehaviour
     public PauseMenuScript pause;
 
     public bool closing = false;
-    private bool closedDoors;
+    public bool closedDoors;
 
     public GameObject enemy;
     // Start is called before the first frame update
@@ -49,7 +49,7 @@ public class SafeDoor : MonoBehaviour
             if (closedDoors)
             {
                 
-                if (SceneManager.GetActiveScene().name != "0")
+                if (SceneManager.GetActiveScene().name != "4")
                 {
                     pause.Stop();
                     nextLevel.SetActive(true);

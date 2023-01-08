@@ -46,10 +46,6 @@ public class GameManager : MonoBehaviour
     {
         
         int level = SceneManager.GetActiveScene().buildIndex;
-        if (level == 4)
-        {
-            level = -1;
-        }
         SceneManager.LoadScene(level + 1);
     }
 }
