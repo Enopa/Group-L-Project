@@ -44,3 +44,7 @@ Enemy Texture: https://www.zedge.net/wallpaper/3aaf311a-6476-3159-b82b-2638c5ede
 Sound Effects: https://getsoundly.com/
 Wall Texture #1: https://www.deviantart.com/llexandro/gallery/54632558/sci-fi-textures
 Wall Texture #2: https://everytexture.com/everytexture-com-stock-metal-texture-00175/
+Jump Sound: https://www.youtube.com/watch?v=Jvgvwl4uqAw
+Knife Swing: https://youtu.be/oIaZM9t_2JY
+Footsteps: https://youtu.be/vX8sbqk007Q
+
